@@ -1,0 +1,88 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXFileReference section */
+		325136C92055BE5800BFE66A /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		325136CA2055BE9F00BFE66A /* config */ = {isa = PBXFileReference; lastKnownFileType = folder; path = config; sourceTree = "<group>"; };
+		325136CB2055BEC500BFE66A /* theme.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = theme.lock; sourceTree = "<group>"; };
+		325136CC2055BEC500BFE66A /* locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = locales; sourceTree = "<group>"; };
+		325136CD2055BEC500BFE66A /* snippets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = snippets; sourceTree = "<group>"; };
+		325136CE2055BEC500BFE66A /* templates */ = {isa = PBXFileReference; lastKnownFileType = folder; path = templates; sourceTree = "<group>"; };
+		325136CF2055BEC500BFE66A /* config.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = config.yml; sourceTree = "<group>"; };
+		325136D02055BEC500BFE66A /* layout */ = {isa = PBXFileReference; lastKnownFileType = folder; path = layout; sourceTree = "<group>"; };
+		325136D12055BEC500BFE66A /* sections */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sections; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		325136C22055BDC100BFE66A = {
+			isa = PBXGroup;
+			children = (
+				325136CF2055BEC500BFE66A /* config.yml */,
+				325136D02055BEC500BFE66A /* layout */,
+				325136CC2055BEC500BFE66A /* locales */,
+				325136D12055BEC500BFE66A /* sections */,
+				325136CD2055BEC500BFE66A /* snippets */,
+				325136CE2055BEC500BFE66A /* templates */,
+				325136CB2055BEC500BFE66A /* theme.lock */,
+				325136CA2055BE9F00BFE66A /* config */,
+				325136C92055BE5800BFE66A /* assets */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		325136C32055BDC100BFE66A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+			};
+			buildConfigurationList = 325136C62055BDC100BFE66A /* Build configuration list for PBXProject "HRSGMarketplace" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 325136C22055BDC100BFE66A;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		325136C72055BDC100BFE66A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		325136C82055BDC100BFE66A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		325136C62055BDC100BFE66A /* Build configuration list for PBXProject "HRSGMarketplace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325136C72055BDC100BFE66A /* Debug */,
+				325136C82055BDC100BFE66A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 325136C32055BDC100BFE66A /* Project object */;
+}
