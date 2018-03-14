@@ -37,6 +37,7 @@
       <input type="hidden" name="id" value="{{ variant.id }}" />
     {% endif %}
 
+
     {% if settings.product_form_style == "swatches" and product.variants.size > 1 or settings.product_form_style == "swatches" and product.options[0] != "Title" %}
       <div class="swatch_options">
         {% for option in product.options %}
@@ -44,6 +45,25 @@
         {% endfor %}
       </div>
     {% endif %}
+
+    {% comment %}
+    Nigel Mar 12, 2018 - Add "Save xxx with an annual plan"
+    {% endcomment %}
+
+    {% assign annual_price = product.variants[0].price %}
+    {% assign monthly_price = product.variants[1].price  %}
+    {% assign monthly_total = monthly_price | times: 12 %}
+    {% assign savings =  monthly_total | minus: annual_price %}
+
+    {% if savings > 0 %}
+        <div class="save_with_annual_plan">
+        Save {{ savings | money }} yearly with an annual plan!
+        </div>
+    {% endif %}
+
+    {% comment %}
+    Nigel Mar 12, 2018 - END
+    {% endcomment %}
 
     {% if settings.display_inventory_left %}
       <div class="items_left">
@@ -76,13 +96,42 @@
         <input type="hidden" name="return_to" value="/checkout" />
       {% endif %}
 
-      {% capture add_to_cart_label %}{% if collection_handles contains 'pre-order' %}{{ 'collections.general.pre_order' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endif %}{% endcapture %}
-      <button type="submit" name="add" class="action_button add_to_cart" data-label={{ add_to_cart_label | json }}>
+      {% capture add_to_cart_label %}
+        {% if collection_handles contains 'pre-order' %}
+            {{ 'collections.general.pre_order' | t }}
+        {% else %}
+            {{ 'products.product.add_to_cart' | t }}
+        {% endif %}
+     {% endcapture %}
+
+        {% comment %}
+        Nigel added section to show contact button if price is 0.00 Mar 11 2018
+        Note Hack adding "Contact us" string directly.
+        {% endcomment %}
+
+      {%if variant.price == 0 %}
+
+            {% capture add_to_cart_label %}Contact us{% endcapture %}
+
+            <a href="/pages/contact" id="AddToCart" name="add" class="action_button add_to_cart" data-label={{ add_to_cart_label | json }}>
+            <span class="text"> <font color="white">{{ add_to_cart_label }}</font></span>
+            </a>
+     {% else %}
+
+        {% comment %}
+        For some reason the addition of multiple variants causes the json filter below to add \n \n to the
+        label. So I stripped it out. Stripping with strip_newlines doesn't work though.
+        {% endcomment %}
+
+        <button type="submit" id="AddToCart" name="add" class="action_button add_to_cart" data-label={{ add_to_cart_label | json | remove: '\n' }}>
         <span class="text">{{ add_to_cart_label }}</span>
         <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" class="checkmark">
           <path fill="none" stroke="{{ settings.btn_text_color }}" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
         </svg>
-      </button>
+        </button>
+
+     {% endif %}
+
     </div>
   </form>
 {% endif %}

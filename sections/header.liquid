@@ -136,7 +136,11 @@
                 <p class="empty_cart">{{ 'layout.general.empty_cart' | t }}</p>
               </div>
               <form action="/checkout" method="post" data-money-format="{{ shop.money_format }}" data-shop-currency="{{ shop.currency }}" data-shop-name="{{ shop.name | escape }}" class="js-cart_content__form {% if cart.item_count == 0 %}hidden{% endif %}">
-                <a class="cart_content__continue-shopping secondary_button">
+                {% comment %}
+                Added href to link below to redirect to home page instead of submitting form and having
+                it redirect to a collection. 
+                {% endcomment %}
+                <a href="{% shop.url %}" class="cart_content__continue-shopping secondary_button">
                   {{ 'cart.general.continue_shopping_link_html' | t }}
                 </a>
                 <ul class="cart_items js-cart_items clearfix">

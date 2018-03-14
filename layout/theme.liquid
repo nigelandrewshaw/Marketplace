@@ -188,8 +188,7 @@
     {% endunless %}
     <script>
       {{ settings.custom_scripts }}
-    </script>
-  {% include 'mw_PO_objects' %}</body>
+    </script></body>
 </html>
 {% endcapture %}
 {% assign content = content | replace_first: '<!DOCTYPE', '!DOCTYPE' | split: ' <' %}

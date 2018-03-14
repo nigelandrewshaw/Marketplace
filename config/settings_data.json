@@ -122,7 +122,7 @@
       "notify_me_form": true,
       "product_form_style": "swatches",
       "display_product_quantity": true,
-      "free_price_text": "Free",
+      "free_price_text": "Contact us for pricing",
       "quick_shop_enabled": true,
       "description_words": "25",
       "quick_shop_full_description": false,
@@ -1251,7 +1251,7 @@
       "notify_me_form": true,
       "product_form_style": "swatches",
       "display_product_quantity": true,
-      "free_price_text": "Price TBD",
+      "free_price_text": "Contact us for pricing",
       "quick_shop_enabled": true,
       "description_words": "25",
       "quick_shop_full_description": false,
@@ -2397,7 +2397,7 @@
       "product_form_style": "swatches",
       "display_product_quantity": false,
       "display_inventory_left": true,
-      "free_price_text": "Free",
+      "free_price_text": "Contact us for pricing",
       "size_chart": "",
       "enable_shopify_review_comments": false,
       "review_position": "below_product_details",
@@ -3290,7 +3290,7 @@
     "display_product_quantity": true,
     "limit_quantity": false,
     "display_inventory_left": false,
-    "free_price_text": "Free",
+    "free_price_text": "Contact us for pricing",
     "size_chart": "",
     "enable_shopify_review_comments": false,
     "review_position": "next_to_gallery",
@@ -3866,7 +3866,7 @@
           "logo_home": "",
           "logo_mobile": "",
           "main_linklist": "main-menu",
-          "main_linklist2": "footer",
+          "main_linklist2": "",
           "vertical_menu": false,
           "search_enabled": false,
           "fixed_header": true,
@@ -3896,18 +3896,18 @@
               "social_icons_footer": false
             }
           },
-          "footer-2": {
+          "1520805802957": {
             "type": "link_list",
             "settings": {
-              "menu": "",
+              "menu": "policies",
               "social_icons_footer": false
             }
           },
           "footer-3": {
             "type": "text",
             "settings": {
-              "title": "Title",
-              "content": "<p>Use this text to share information about your brand with your customers.<\/p>",
+              "title": "Social",
+              "content": "<p>Find us on Twitter, Facebook and LinkedIn. Or click to email us!<\/p>",
               "social_icons_footer": true
             }
           }
@@ -3915,7 +3915,7 @@
         "block_order": [
           "footer-0",
           "footer-1",
-          "footer-2",
+          "1520805802957",
           "footer-3"
         ],
         "settings": {
@@ -3962,7 +3962,7 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/ChessElite.jpg",
-              "link": "shopify:\/\/collections",
+              "link": "shopify:\/\/collections\/competencies",
               "title": "Competencies",
               "text": "<p>Nurture the behaviors that drive success<\/p>",
               "button_label": "Explore"
@@ -4227,6 +4227,7 @@
       },
       "1489285418400": {
         "type": "featured-blog",
+        "disabled": true,
         "settings": {
           "title": "Blog posts",
           "blog_widget_select": "",
@@ -4240,6 +4241,7 @@
       },
       "1489285524898": {
         "type": "testimonial",
+        "disabled": true,
         "blocks": {
           "1489285524898-0": {
             "type": "image",
@@ -4299,6 +4301,7 @@
       },
       "1520628185124": {
         "type": "social-feeds",
+        "disabled": true,
         "blocks": {
           "1520628185124-0": {
             "type": "twitter",
@@ -4364,8 +4367,8 @@
           "1520779733000": {
             "type": "text",
             "settings": {
-              "title": "Heading",
-              "text": "<p>Text area can be used for special announcements or general information.<\/p>"
+              "title": "Nurture the behaviors that drive success.",
+              "text": "<p>Competencies are the proven approach to streamlining the talent management process and improving organizational performance.<\/p>"
             }
           }
         },
@@ -4382,7 +4385,7 @@
           "featured_collection_image": true,
           "image": "shopify:\/\/shop_images\/ChessExotic_1bb3185d-663a-4e4b-b6ce-b2df5f0fae89.jpg",
           "image_darken": true,
-          "toggle": true
+          "toggle": false
         }
       },
       "list-collections-template": {
@@ -4420,6 +4423,22 @@
           "text_alignment": "center",
           "button_label": "",
           "button_link": ""
+        }
+      },
+      "contact-template": {
+        "type": "contact-template",
+        "settings": {
+          "image": "",
+          "image_darken": false,
+          "title": "Get in touch",
+          "subtitle": "Subheading",
+          "show_map": false,
+          "contact_address": "",
+          "zoom_level": 12,
+          "map_height": 400,
+          "map_stretch": true,
+          "map_greyscale": false,
+          "map_scrolling": false
         }
       }
     },

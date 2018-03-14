@@ -2844,11 +2844,19 @@ $(function() {
   }
 
   $('body').on("change", "#cart_form input.quantity", function() {
-    ajaxUpdateCart($(this).data('line-id'), $(this).val(), $(this).parents('#cart_form'));
+    var cart = $(this).parents('form:first');
+    setTimeout(function() {
+      cart.submit();
+    }, 500);
+    //ajaxUpdateCart($(this).data('line-id'), $(this).val(), $(this).parents('#cart_form'));
   });
 
   $('body').on("change", ".cart_content input.quantity", function() {
-    ajaxUpdateCart($(this).data('line-id'), $(this).val(), $(this).parents('.cart_content'));
+    var cart = $(this).parents('form:first');
+    setTimeout(function() {
+      cart.submit();
+    }, 500);
+    //ajaxUpdateCart($(this).data('line-id'), $(this).val(), $(this).parents('.cart_content'));
   });
 
   {% if settings.cart_action == 'ajax' %}
